@@ -33,10 +33,10 @@
                     </div>
                 </div>
                 <div class="header-avator-con">
-                    <full-screen v-model="isFullScreen" @on-change="fullscreenChange"></full-screen>
+                    <!-- <full-screen v-model="isFullScreen" @on-change="fullscreenChange"></full-screen>
                     <lock-screen></lock-screen>  
                     <notice></notice>   
-                    <language-list></language-list>         
+                    <language-list></language-list>          -->
                     <div class="user-dropdown-menu-con">
                         <Row type="flex" justify="end" align="middle" class="user-dropdown-innercon">
                             <Dropdown transfer trigger="click" @on-click="handleClickUserDropdown">
@@ -45,11 +45,11 @@
                                     <Icon type="arrow-down-b"></Icon>
                                 </a>
                                 <DropdownMenu slot="list">
-                                    <DropdownItem name="ownSpace">{{L('UserProfile')}}</DropdownItem>
+                                    <!-- <DropdownItem name="ownSpace">{{L('UserProfile')}}</DropdownItem> -->
                                     <DropdownItem name="loginout" divided>{{L('Logout')}}</DropdownItem>
                                 </DropdownMenu>
                             </Dropdown>
-                            <span class="avatar" style="background: #619fe7;margin-left: 10px;"><img src="../images/usericon.jpg" /></span>
+                            <!-- <span class="avatar" style="background: #619fe7;margin-left: 10px;"><img src="../images/usericon.jpg" /></span> -->
                         </Row>
                     </div>
                 </div>
