@@ -10,20 +10,27 @@ namespace Abp.BG.Users.Dto
     [AutoMapTo(typeof(User))]
     public class CreateUserDto : IShouldNormalize
     {
+        public CreateUserDto()
+        {
+            Name = string.Empty;
+            Surname = string.Empty;
+            EmailAddress = string.Empty;
+        }
+
         [Required]
         [StringLength(AbpUserBase.MaxUserNameLength)]
         public string UserName { get; set; }
 
-        [Required]
+        //[Required]
         [StringLength(AbpUserBase.MaxNameLength)]
         public string Name { get; set; }
 
-        [Required]
+        //[Required]
         [StringLength(AbpUserBase.MaxSurnameLength)]
         public string Surname { get; set; }
 
-        [Required]
-        [EmailAddress]
+        //[Required]
+        //[EmailAddress]
         [StringLength(AbpUserBase.MaxEmailAddressLength)]
         public string EmailAddress { get; set; }
 

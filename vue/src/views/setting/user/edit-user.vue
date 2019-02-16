@@ -12,7 +12,7 @@
                         <FormItem :label="L('UserName')" prop="userName">
                             <Input v-model="user.userName" :maxlength="32" :minlength="2"></Input>
                         </FormItem>
-                        <FormItem :label="L('Name')" prop="name">
+                        <!-- <FormItem :label="L('Name')" prop="name">
                             <Input v-model="user.name" :maxlength="32"></Input>
                         </FormItem>
                         <FormItem :label="L('Surname')" prop="surname">
@@ -20,7 +20,7 @@
                         </FormItem>
                         <FormItem :label="L('EmailAddress')" prop="emailAddress">
                             <Input v-model="user.emailAddress" type="email" :maxlength="32"></Input>
-                        </FormItem>
+                        </FormItem> -->
                         <FormItem>
                             <Checkbox v-model="user.isActive">{{L('IsActive')}}</Checkbox>
                         </FormItem>
@@ -80,9 +80,9 @@
         }
         userRule={
             userName:[{required: true,message:this.L('FieldIsRequired',undefined,this.L('UserName')),trigger: 'blur'}],
-            name:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('Name')),trigger: 'blur'}],
-            surname:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('Surname')),trigger: 'blur'}],
-            emailAddress:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('Email')),trigger: 'blur'},{type: 'email'}],
+            // name:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('Name')),trigger: 'blur'}],
+            // surname:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('Surname')),trigger: 'blur'}],
+            // emailAddress:[{required:true,message:this.L('FieldIsRequired',undefined,this.L('Email')),trigger: 'blur'},{type: 'email'}],
         }
     }
 </script>

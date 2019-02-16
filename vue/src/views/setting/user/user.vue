@@ -9,11 +9,11 @@
                                 <Input v-model="pagerequest.userName"></Input>
                             </FormItem>
                         </Col>
-                        <Col span="6">
+                        <!-- <Col span="6">
                             <FormItem :label="L('Name')+':'" style="width:100%">
                                 <Input v-model="pagerequest.name"></Input>
                             </FormItem>
-                        </Col>
+                        </Col> -->
                         <Col span="6">
                             <FormItem :label="L('IsActive')+':'" style="width:100%">
                                 <!--Select should not set :value="'All'" it may not trigger on-change when first select 'NoActive'(or 'Actived') then select 'All'-->
@@ -132,10 +132,12 @@
         columns=[{
             title:this.L('UserName'),
             key:'userName'
-        },{
-            title:this.L('Name'),
-            key:'name'
-        },{
+        },
+        // {
+        //     title:this.L('Name'),
+        //     key:'name'
+        // },
+        {
             title:this.L('IsActive'),
             render:(h:any,params:any)=>{
                return h('span',params.row.isActive?this.L('Yes'):this.L('No'))
